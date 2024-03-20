@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            background-image: url("img.jpg");
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px ;
+            margin: 100px auto 100px;
+            background-color: rgb(194, 71, 96);
+            border-radius: 10px;
+            box-shadow: 10px 10px 10px rgb(150, 90, 90);
+        }
+        div{
+            margin: 2px;
+            padding: 2px;
+        }
+        button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            margin-bottom: 10px;
+            padding: 4px;
+            border-radius: 10px;
+        }
+        input{
+            margin: 2px;
+            padding: 2px;
+            background-color: rgb(218, 151, 164);
+            border-radius: 20px;
+            box-shadow: 2px 2px 2px rgb(151, 101, 101);
+        }
+        #reset{
+            background-color: red;
+        }
+        #submit{
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <h2 style="text-align: center;">Registration</h2>
+            <div>
+                <label for="username">User Name</label>
+                <input type="text" name="username" id="username" required>
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required minlength="8">
+            </div>
+            <div>
+                <label for="phonenumber">Phone Number</label>
+                <input type="tel" name="phonenumber" id="phonenumber" required>
+            </div>
+            <div>
+                <label for="dob">Date-of-Birth</label>
+                <input type="date" name="dob" id="dob" required>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div>
+                Gender
+                <input type="radio" name="gender" id="gender" value="male">
+                <label for="gender">Male</label>
+                <input type="radio" name="gender" id="gender" value="female">
+                <label for="gender">Female</label>
+            </div>
+            <div>
+                <label for="portfolio">Portfolio</label>
+                <input type="url" name="portfolio" id="portfolio" required>
+            </div>
+            <div>
+                Skills:
+                <label for="java">Java</label>
+                <input type="checkbox" name="java" id="java">
+                <label for="python">Python</label>
+                <input type="checkbox" name="python" id="python">
+                <label for="javascript">Javascript</label>
+                <input type="checkbox" name="javascript" id="javascript">
+            </div>
+            <div>
+                <label for="resume">Resume</label>
+                <input type="file" name="resume" id="resume" required>
+            </div>
+            <div>
+                <h4>Prefered city to work</h4>
+                <select name="city" id="city" multiple>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Trichy">Trichy</option>
+                    <option value="Madurai">Madurai</option>
+                    <option value="Coimbatore">Coimbatore</option>
+                    <option value="Bengaluru">Bengaluru</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                </select>
+            </div>
+            <button type="reset" id="reset">Reset</button>
+            <button type="submit" id="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

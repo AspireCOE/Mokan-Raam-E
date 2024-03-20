@@ -1,0 +1,47 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(244, 240, 247);
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    background-color: rgb(232, 217, 246);
+}
+li{
+    display: inline;
+    margin: 10px;
+}
+
+li a:visited{
+    color: rgb(162, 0, 255);
+}
+li a:hover{
+    color: red;
+}
+.img{
+    order: -1;
+}
+nav{
+    order: 1;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.container div{
+    margin: 50px;
+    padding: 20px;
+    height: 300px;
+    width: 300px;
+}
+
+.iframey{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
