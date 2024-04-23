@@ -1,0 +1,22 @@
+{
+  "name": "05tut",
+  "version": "1.0.0",
+  "description": "Node.js Web Server tutorial",
+  "main": "server.js",
+  "scripts": {
+    "start": "node web_server",
+    "dev": "nodemon web_server"
+  },
+  "author": "Mokan Raam",
+  "license": "ISC",
+  "keywords": [],
+  "dependencies": {
+    "cors": "^2.8.5",
+    "date-fns": "^3.6.0",
+    "express": "^4.19.2",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
