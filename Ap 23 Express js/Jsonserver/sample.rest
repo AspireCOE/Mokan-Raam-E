@@ -1,0 +1,29 @@
+GET http://localhost:3000/items
+
+###
+GET http://localhost:3000/sell?_sort=rate
+
+###
+GET http://localhost:3000/sell?_sort=rate:desc,id
+
+###
+GET http://localhost:3000/sell?_sort=rate:desc,id:asc
+
+###
+GET http://localhost:3000/items?_page=1
+
+###
+GET http://localhost:3000/items?_page=1&_limit=2
+
+
+###
+GET http://localhost:3000/items?price_gt=50&price_lt=100
+
+###
+GET http://localhost:3000/items?id_ne=1
+
+###
+GET http://localhost:3000/sell?rate_like=^h
+
+###
+GET http://localhost:3000/sell?_q=ow
