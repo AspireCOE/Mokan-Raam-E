@@ -4,7 +4,7 @@ import axios from "axios";
 const app = express();
 app.use(express.json());
 
-const port = process.env.PORT || port;
+const port = process.env.PORT || 5000;
 const Url = "http://localhost:3000";
 
 // POST

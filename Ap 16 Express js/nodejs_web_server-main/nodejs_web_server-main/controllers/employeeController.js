@@ -71,3 +71,4 @@ const getEmployee = (req,res) => {
 }
 
 module.exports = {getAllEmployees,createNewEmployees,updateEmployees,deleteEmployees,getEmployee}
+

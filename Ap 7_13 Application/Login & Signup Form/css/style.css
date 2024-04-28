@@ -13,7 +13,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #4070f4;
+    background-color: antiquewhite;
     background-image: url('images/makeup.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -26,7 +26,7 @@
     width: 100%;
     padding: 30px;
     border-radius: 6px;
-    background: #FFF;
+    background: #f24822;
 }
 .form.signup{
     opacity: 0;
@@ -84,13 +84,13 @@ form{
     padding: 5px;
 }
 .field button{
-    color: #fff;
-    background-color: #027be6;
+    color: black;
+    background-color: #f1c6a9;
     transition: all 0.3s ease;
     cursor: pointer;
 }
 .field button:hover{
-    background-color: #012adf;
+    background-color: #db9191;
 }
 .form-link{
     text-align: center;

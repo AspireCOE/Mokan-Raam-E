@@ -1,1 +1,12 @@
-{}
+{
+  "users": [
+    {
+      "id": "391b",
+      "name": "mokan",
+      "age": "21",
+      "password": "123",
+      "phone": "9080870228",
+      "email": "mokanraame25@gmail.com"
+    }
+  ]
+}
