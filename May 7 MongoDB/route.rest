@@ -1,0 +1,15 @@
+GET http://localhost:4500/trainee/
+
+### 
+POST http://localhost:4500/trainee/
+Content-Type: application/json
+
+{
+  "name": "Mokan",
+  "role": "Software Engineer",
+  "age": 22,
+  "gender": "Male"
+}
+
+###
+DELETE http://localhost:3600/trainee

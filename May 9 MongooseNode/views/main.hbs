@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MongoDB</title>
+</head>
+<body>
+    <h1>MongoDB Database</h1>
+    <p style="background-color: aqua;padding:10px">{{message}}</p>
+
+    {{#if edit_id}}
+    <h3 style="color: red;">Edit</h3>
+    <form method="post" action="/updatebook/{{edit_id}}" style="background-color: rgb(255, 85, 0); padding:10px">
+        <label for="">Title</label>
+        <input type="text" name="title" value="{{edit_book.title}}">
+        <br>
+        <label for="">Author</label>
+        <input type="text" name="author" value="{{edit_book.author}}">
+        <br>
+        <input type="submit">
+    </form>
+    {{else}}
+    <h3 style="color: red;">Create</h3>
+    <form method="post" action="/insertbook" style="background-color: rgb(255, 230, 0); padding:10px" >
+        <label for="">Title</label>
+        <input type="text" name="title">
+        <br>
+        <label for="">Author</label>
+        <input type="text" name="author">
+        <br>
+        <input type="submit">
+    </form>
+    {{/if}}
+
+    <ul style="background-color: rgb(229, 153, 225); padding:10px">
+        {{#each books}}
+        <li>{{this.title}}<--->{{this.author}}  <a href="/?edit_id={{this._id}}">Edit</a> <a href="/?delete_id={{this._id}}" onclick="return confirm('Are you sure want to delete?')">Delete</a></li>
+        {{/each}}
+    </ul>
+</body>
+</html>
