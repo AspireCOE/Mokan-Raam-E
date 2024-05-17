@@ -1,3 +1,15 @@
 <H1>Welcome to Angular</H1>
 
-<app-shop></app-shop>
+<!-- <app-account></app-account> -->
+
+<a [routerLink]="'shop'">Shop</a>
+<br>
+<a [routerLink]="'product'">Product</a>
+<br>
+<a [routerLink]="'student'">Student</a>
+<br>
+<a [routerLink]="'account'">Account</a>
+
+<div>
+    <router-outlet></router-outlet>
+</div>

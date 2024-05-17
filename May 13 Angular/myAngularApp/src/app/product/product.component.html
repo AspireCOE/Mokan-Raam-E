@@ -1,0 +1,40 @@
+<style>
+    table {
+        border-collapse: collapse; 
+        width: 100%;
+    }
+    th, td {
+        border: 1px solid black; 
+        padding: 8px; 
+        text-align: center; 
+    }
+</style>
+
+Choose Category:<select [(ngModel)]="categoryInput">
+    <option>Electronics</option>
+    <option>Beverages</option>
+    <option>Stationary</option>
+</select>
+<table style="background-color: rgb(248, 235, 218);padding: 10px;margin: 10px; border: 2px solid rgb(255, 2, 2)">
+    <thead>
+        <tr>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Cost</th>
+            <th>Category</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(product of products;track product) {
+            <tr>
+                @if (product.category==categoryInput)
+                {
+                <td>{{product.productId}}</td>
+                <td>{{product.productName}}</td>
+                <td>{{product.cost}}</td>
+                <td>{{product.category}}</td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>

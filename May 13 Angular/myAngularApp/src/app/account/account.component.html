@@ -1,0 +1,54 @@
+<div style="background-color: rgb(160, 241, 244); padding: 20px; margin: 20px;border: 2px soild red; border-radius: 20px;">
+    <p>Account works!</p>
+    <style>
+        table {
+            border-collapse: collapse; 
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black; 
+            padding: 8px; 
+            text-align: center; 
+        }
+    </style>
+
+    Choose Category:<select [(ngModel)]="AccountType">
+        <option>Current</option>
+        <option>Savings</option>
+        <option>Salary</option>
+        <option>Fixed deposit</option>
+    </select>
+    <table style="background-color: rgb(248, 235, 218);padding: 10px;margin: 10px; border: 2px solid rgb(255, 2, 2);">
+        <thead>
+            <tr>
+                <th>Account Number</th>
+                <th>Account Holder Name</th>
+                <th>Type Of Account</th>
+                <th>Amount</th>
+                <th>Bank Name</th>
+                <th>Date Of Create</th>
+                <th>Account Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(account of accounts;track account) {
+                <tr>
+                    @if (account.TypeOfAccount == AccountType)
+                    {
+                        <td>{{account.AccountNumber}}</td>
+                        <td>{{account.AccountHolderName}}</td>
+                        <td>{{account.TypeOfAccount}}</td>
+                        <td>{{account.Amount}}</td>
+                        <td>{{account.BankName}}</td>
+                        <td>{{account.DateOfCreate|date:"shortDate"}}</td>
+                        <td [ngSwitch]="accountCondition(account.Amount)" style="color: red;font-size: larger;font-weight: bolder;">
+                            <div *ngSwitchCase="'Inactive'">Inactive</div>
+                            <div *ngSwitchCase="'Active'">Active</div>
+                            <div *ngSwitchCase="'Loyal'">Loyal</div>
+                        </td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
